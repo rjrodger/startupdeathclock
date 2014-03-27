@@ -1,23 +1,41 @@
 $(function () {
   function pad(s) { return (''+s).length < 2 ? '0'+s : s; }                     
 
+  var msg = $('#msg');
+  msg.html('');
+
+
   var companyid = ''
 
   var params = {};
   var pm = window.location.href.indexOf('#');
 
   if( -1 != pm ) {
-    var qp = window.location.href.slice(pm + 1).split('/');
-    for(var p = 0; p < qp.length; p++) {
-      var nv = qp[p].split('=');
-      params[nv[0]]=unescape(nv[1]);
-    }
-  }
+    companyid = window.location.href.substring(pm + 1)
 
-  setclock(params,true);                     
+    msg.html('loading...');
+
+    $.ajax({
+      url:'/api/1.0/load/'+companyid,
+      type:'GET', cache:false, dataType:'json',
+      data:params,
+      success:function(data) {
+        msg.html('');
+        setclock(data,true);                     
+      },
+      error:function(){
+        setclock({},true)
+      }
+    })
+  }
+  else setclock({},true)
+
+
+
 
   function setclock(params,updateform) { 
-    var msg = $('#msg');
+    params = params || {}
+
     msg.html('');
 
     var revm = params.revm ? parseInt(params.revm,10) : ''==params.revm ? 0 : 10000;
@@ -30,7 +48,7 @@ $(function () {
 
     var death = new Date();
     var start = 8 == from.length ? new Date(parseInt(from.substring(0,4),0),parseInt(from.substring(4,6),0)-1,parseInt(from.substring(6,8),0)) : death;
-    var from = ''+start.getFullYear()+pad(start.getMonth()+1)+pad(start.getDay())
+    var from = ''+start.getFullYear()+pad(start.getMonth()+1)+pad(start.getDate())
 
     if( expm <= revm ) {
        msg.text('Yah! Revenues cover expenses and you never run out of money!');
@@ -62,43 +80,44 @@ $(function () {
     
     if( updateform ) {
       $('#from').val(from);
-      
       $('#revm').val(revm);                                           
       $('#expm').val(expm);                                           
       $('#cash').val(cash);    
       $('#name').val(name);
     }                                           
-
-    var href = window.location.href;
-    var hm = href.indexOf('#');
-    href = -1 != hm ? href.substring(0,hm) : href;
-    hrefparams = '#revm='+revm+'/expm='+expm+'/cash='+cash+'/from='+from+'/name='+escape(name);
-    //window.location.href=href+hrefparams;
-    $('#hidefaq').attr('href',hrefparams)
   }
+
 
   function resetclock(event) {
     if( (event.which < 48 || 57 < event.which) && (8 != event.which && 46 != event.which) ) return;
 
     params = {name:$('#name').val(),revm:$('#revm').val(),expm:$('#expm').val(),cash:$('#cash').val(),from:$('#from').val()};
-    //console.log(params)
     setclock(params);
 
     $.ajax({
       url:'/api/1.0/update/'+companyid,
       type:'POST', cache:false, dataType:'json',
       data:params,
-      success:function(data) {
-        companyid = data.id
-      }
+      success:markid()
     })
   }
+
+  
+  function markid(data) {
+    if( !companyid ) {
+      companyid = data.id
+
+      var href = window.location.href;
+      var hm = href.indexOf('#');
+      href = -1 != hm ? href.substring(0,hm) : href;
+      window.location.href=href+'#'+companyid
+    }
+  }
+
 
   $('#revm').bind('change',resetclock).bind('keyup',resetclock);
   $('#expm').bind('change',resetclock).bind('keyup',resetclock);                  
   $('#cash').bind('change',resetclock).bind('keyup',resetclock);                  
   $('#from').bind('change',resetclock).bind('keyup',resetclock);                  
   $('#name').bind('change',resetclock).bind('keyup',resetclock);        
-
-  $('#hidefaq').click(function(){$('#faq').fadeOut(500)});          
 });
