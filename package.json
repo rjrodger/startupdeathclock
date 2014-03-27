@@ -23,6 +23,8 @@
   "homepage": "https://github.com/rjrodger/startupdeathclock",
   "dependencies": {
     "seneca": "~0.5.15",
-    "underscore": "~1.6.0"
+    "underscore": "~1.6.0",
+    "success": "~0.1.0",
+    "rolling-stats": "~0.1.0"
   }
 }

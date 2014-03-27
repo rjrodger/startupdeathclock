@@ -4,12 +4,16 @@
 var seneca = require('seneca')()
 
 seneca
-  //.use('kafka-transport')
   .use('../lib/api.js')
-  .client({type:'queue',partition:0})
 
-//seneca.use('../lib/api.js')
-//seneca.use('../lib/doc.js')
+  .declare('../lib/doc.js')
+  .declare('../lib/hist.js')
+  .declare('../lib/real.js')
+
+  .client({port:9000,pin:{role:'hist',kind:'clock',cmd:'*'}})
+  .client({port:9001,pin:{role:'real',kind:'clock',cmd:'*'}})
+
+  .client({type:'queue',pin:{role:'doc',kind:'clock',cmd:'*'}})
 
 
 var kraken = require('kraken-js'),

@@ -1,0 +1,5 @@
+require('seneca')()
+  .use('level-store',{folder:'../data/hist'})
+  .use('../lib/hist.js')
+  .listen({type:'pubsub'})
+  .listen({port:9000})
