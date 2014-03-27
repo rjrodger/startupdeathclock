@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>{+title /}</title>
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Startup Death Clock</title>
+    <link rel="stylesheet" href="css/death.css" />
+</head>
+<body>
+
+  {+body /}
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.countdown.min.js"></script>
+<script data-main="js/app" src="components/requirejs/require.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+{>"layouts/master" /}
+<div style="width: 832px; margin: 100px auto">
+<h1><span id="startup"></span> Death Clock</h1>
+
+<div id="deathbg">
+<div id="death"></div>
+<img src="img/labels.png" style="margin-top:10px">
+</div>
+</div>
+
+<div style="clear:both"></div>
+
+<div id="faq">
+
+
+<ul>
+<li><h2>What is this?</h2>
+<p>
+The startup death clock tells you what day your startup will run out of money.
+Try it yourself:
+<label for="name">Startup Name</label>
+<input id="name" type="text">
+
+<label for="revm">Monthly Revenue</label>
+<input id="revm" type="text">
+
+<label for="expm">Monthly Expenses</label>
+<input id="expm" type="text">
+
+<label for="cash">Cash in the Bank</label>
+<input id="cash" type="text">
+
+<label for="from">Start Date (yyyymmdd)</label>
+<input id="from" type="text">
+
+</p>
+<p id="msg"></p>
+</li>
+<li><h2>Why?</h2>
+<p>
+Why not? Credits to <a href="http://blog.asmartbear.com/death-clock.html">Jason Cohen</a> for the idea, and 
+<a href="http://keith-wood.name/countdown.html">Keith Wood</a> for the cool countdown clock. 
+And <a href="http://www.richardrodger.com">Richard Rodger</a> (me) built it.
+Also discussed on <a href="http://news.ycombinator.com/item?id=1856463">Hacker News</a>.
+</p>
+<p>
+Got feedback? Reach me on Twitter: <a href="http://twitter.com/rjrodger">@rjrodger</a> or by email: <a href="mailto:richard@ricebridge.com">richard@ricebridge.com</a>.
+</p>
+</li>
+<li><h2>I Just Want The Clock!</h2>
+<p>
+Cool! Try projecting this page onto a wall. All you want is the clock.
+To get this FAQ back, just reload.
+<br /><a id="hidefaq" href="#" >Hide FAQ</a>
+</p>
+</li>
+</ul>
+</div>

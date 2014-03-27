@@ -1,0 +1,28 @@
+{
+  "name": "startupdeathclock",
+  "version": "0.0.0",
+  "description": "The startup death clock tells you what day your startup will run out of money.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rjrodger/startupdeathclock.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "startup",
+    "death",
+    "clock"
+  ],
+  "author": "Richard Rodger (http://richardrodger.com)",
+  "bugs": {
+    "url": "https://github.com/rjrodger/startupdeathclock/issues"
+  },
+  "homepage": "https://github.com/rjrodger/startupdeathclock",
+  "dependencies": {
+    "seneca": "~0.5.15",
+    "underscore": "~1.6.0"
+  }
+}
