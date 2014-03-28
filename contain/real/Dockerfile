@@ -5,4 +5,4 @@ FROM             base-0.0.0
 ADD . /startupdeathclock
 
 WORKDIR /startupdeathclock/srv
-CMD node doc-srv.js --seneca.log.all >> /var/log/startupdeathclock/doc.log 2>&1
+CMD node real-srv.js --seneca.log.all >> /var/log/startupdeathclock/real.log 2>&1

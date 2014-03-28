@@ -2,7 +2,8 @@
 "use strict";
 
 
-var _ = require('underscore')
+var _       = require('underscore')
+var success = require('success')
 
 
 
@@ -31,7 +32,24 @@ module.exports = function( options ) {
 
 
   function clock_set( args, done ) {
-    clockent.make$(args).save$(done)
+    var seneca = this
+
+    clockent.load$(args.id, success(done,function( clock ){
+      clock = clock || clockent.make$()
+
+      clock.data$({
+        cash: args.cash,
+        expm: args.expm,
+        revm: args.revm,
+        from: args.from,
+        name: args.name,
+
+      }).save$(success(done,function(clock){
+        done(null,clock)
+
+        seneca.act('role:hist,kind:clock',clock)
+      }))
+    }))
   }
 
 

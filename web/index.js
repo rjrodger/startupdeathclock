@@ -1,5 +1,8 @@
 'use strict';
 
+var beanstalk_host = process.env.BEANSTALK_HOST||'127.0.0.1'
+var web_host = process.env.WEB_HOST||'127.0.0.1'
+
 
 var seneca = require('seneca')()
 
@@ -10,10 +13,10 @@ seneca
   .declare('../lib/hist.js')
   .declare('../lib/real.js')
 
-  .client({port:9000,pin:{role:'hist',kind:'clock',cmd:'*'}})
-  .client({port:9001,pin:{role:'real',kind:'clock',cmd:'*'}})
+  .client({port:9000,pin:{role:'hist',kind:'clock',cmd:'*'},host:web_host})
+  .client({port:9001,pin:{role:'real',kind:'clock',cmd:'*'},host:web_host})
 
-  .client({type:'queue',pin:{role:'doc',kind:'clock',cmd:'*'}})
+  .client({type:'queue',pin:{role:'doc',kind:'clock',cmd:'*'},host:beanstalk_host})
 
 
 var kraken = require('kraken-js'),

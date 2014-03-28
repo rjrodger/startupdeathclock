@@ -98,7 +98,7 @@ $(function () {
       url:'/api/1.0/update/'+companyid,
       type:'POST', cache:false, dataType:'json',
       data:params,
-      success:markid()
+      success:markid
     })
   }
 
