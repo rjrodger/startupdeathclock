@@ -20,3 +20,13 @@ node_modules
 data/hist
 data/doc
 
+contain/doc/lib
+contain/doc/srv
+contain/real/lib
+contain/real/srv
+contain/hist/lib
+contain/hist/srv
+contain/index/lib
+contain/index/srv
+contain/index/web
+
