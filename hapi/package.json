@@ -1,0 +1,15 @@
+{
+  "name": "sdc-hapi",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "good": "^2.1.2",
+    "hapi": "^6.0.2"
+  }
+}

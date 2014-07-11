@@ -1,0 +1,132 @@
+/* line 1, /Users/richard/Projects/startupdeathclock/kraken/css/app */
+body {
+  background: #f0f0f0 url(pattern-8jh2.png);
+}
+/* line 6, /Users/richard/Projects/startupdeathclock/kraken/css/app */
+#deathbg {
+  width: 832px;
+  height: 105px;
+  padding: 10px;
+  background-color: #200;
+  background-image: url(shiny.png);
+  background-position: 0% 0%;
+  background-repeat: repeat-x;
+  background-size: 100% 55%;
+  border: 2px solid #900;
+  border-radius: 6px;
+}
+/* line 20, /Users/richard/Projects/startupdeathclock/kraken/css/app */
+#death div.sep {
+  width: 26px;
+  height: 77px;
+  float: left;
+}
+/* line 21, /Users/richard/Projects/startupdeathclock/kraken/css/app */
+#death div {
+  width: 52px;
+  height: 77px;
+  background: url(digits.png) no-repeat 0px 0px;
+  float: left;
+}
+/* line 22, /Users/richard/Projects/startupdeathclock/kraken/css/app */
+#death div.d1 {
+  background-position: 0px 0px;
+}
+/* line 23, /Users/richard/Projects/startupdeathclock/kraken/css/app */
+#death div.d2 {
+  background-position: -52px 0px;
+}
+/* line 24, /Users/richard/Projects/startupdeathclock/kraken/css/app */
+#death div.d3 {
+  background-position: -104px 0px;
+}
+/* line 25, /Users/richard/Projects/startupdeathclock/kraken/css/app */
+#death div.d4 {
+  background-position: -156px 0px;
+}
+/* line 26, /Users/richard/Projects/startupdeathclock/kraken/css/app */
+#death div.d5 {
+  background-position: -208px 0px;
+}
+/* line 27, /Users/richard/Projects/startupdeathclock/kraken/css/app */
+#death div.d6 {
+  background-position: -260px 0px;
+}
+/* line 28, /Users/richard/Projects/startupdeathclock/kraken/css/app */
+#death div.d7 {
+  background-position: -312px 0px;
+}
+/* line 29, /Users/richard/Projects/startupdeathclock/kraken/css/app */
+#death div.d8 {
+  background-position: -364px 0px;
+}
+/* line 30, /Users/richard/Projects/startupdeathclock/kraken/css/app */
+#death div.d9 {
+  background-position: -416px 0px;
+}
+/* line 31, /Users/richard/Projects/startupdeathclock/kraken/css/app */
+#death div.d0 {
+  background-position: -468px 0px;
+}
+/* line 33, /Users/richard/Projects/startupdeathclock/kraken/css/app */
+#title {
+  font-family: 'courier';
+  font-size: 3em;
+  font-weight: bold;
+  color: #600;
+  width: 506px;
+  margin: auto;
+  text-align: center;
+}
+/* line 44, /Users/richard/Projects/startupdeathclock/kraken/css/app */
+#drjohnson {
+  width: 505px;
+  height: 70px;
+  margin: 20px auto;
+}
+/* line 50, /Users/richard/Projects/startupdeathclock/kraken/css/app */
+#drjohnson p {
+  color: #200;
+  padding: 0px;
+  margin: 0px;
+  font-size: 1.2em;
+  xfont-weight: bold;
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+/* line 60, /Users/richard/Projects/startupdeathclock/kraken/css/app */
+#control {
+  width: 832px;
+  height: 70px;
+  padding: 10px;
+  background-color: #200;
+  background-image: url(shiny.png);
+  border: 2px solid #900;
+  border-radius: 6px;
+  margin: 20px 0px 40px 0px;
+}
+/* line 72, /Users/richard/Projects/startupdeathclock/kraken/css/app */
+div.param {
+  width: 205px;
+  float: left;
+  font-family: arial;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+/* line 80, /Users/richard/Projects/startupdeathclock/kraken/css/app */
+div.param input {
+  border: 1px solid #600;
+  border-radius: 6px;
+  padding: 5px;
+  font-family: 'courier';
+  font-size: 1.5em;
+  font-weight: bold;
+  width: 180px;
+  text-align: right;
+}
+/* line 92, /Users/richard/Projects/startupdeathclock/kraken/css/app */
+#explain {
+  width: 505px;
+  margin: 20px auto;
+  font-family: arial;
+  font-size: 1.5em;
+}

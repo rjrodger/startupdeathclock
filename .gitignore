@@ -30,3 +30,4 @@ contain/index/lib
 contain/index/srv
 contain/index/web
 
+.build

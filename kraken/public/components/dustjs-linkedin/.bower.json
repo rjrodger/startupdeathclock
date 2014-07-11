@@ -1,0 +1,35 @@
+{
+  "name": "dustjs-linkedin",
+  "version": "2.4.0",
+  "main": "dist/dust-full.min.js",
+  "devDependencies": {
+    "pegjs": "0.7.0"
+  },
+  "ignore": [
+    "**/.*",
+    "tmp",
+    "docs",
+    "test",
+    "src",
+    "benchmark",
+    "archive",
+    "node_modules",
+    ".grunt",
+    "_SpecRunner.html",
+    ".travis.yml",
+    "Gruntfile.js",
+    "package.json",
+    "bower.json"
+  ],
+  "homepage": "https://github.com/linkedin/dustjs",
+  "_release": "2.4.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.4.0",
+    "commit": "426af12daa34ad22bfa26693adf0118e572650ba"
+  },
+  "_source": "git://github.com/linkedin/dustjs.git",
+  "_target": "^2.0.3",
+  "_originalSource": "dustjs-linkedin",
+  "_direct": true
+}

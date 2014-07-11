@@ -10,7 +10,6 @@ require('seneca')()
 
   .use('../lib/doc.js')
 
-
   .listen({
     type: 'beanstalk',
     pin:  {role:'doc',kind:'clock',cmd:'*'},
