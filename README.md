@@ -8,7 +8,7 @@ This is a micro-services example for the [Seneca](http://senecajs.org) toolkit.
 This systems consists of four services:
 
    * doc-srv: JSON document store
-   * hist-srv: History story to record document updates over time
+   * hist-srv: history story to record document updates over time
    * real-srv: live business statistics on usage of the website
    * index: the web server
 
@@ -24,6 +24,8 @@ This shows you how to integrate seneca into each web framework.
 
 ## Requirements
 
+This is a [Node.js](http://nodejs.org) app, using the [Seneca](http://senecajs.org) toolkit.
+
 You will need to install [Redis](http://redis.io/) (for pub-sub messages) and
 [beanstalk](http://kr.github.io/beanstalkd/) (for queued messages). Just run the basic servers with default configuration.
 
@@ -33,10 +35,10 @@ You will also need [Docker](http://docker.com) to run the full deployment scenar
 ## Structure
 
 The service implementations are wrapped as Seneca plugins and placed
-in the _lib_ folder. This is where your main business log goes
+in the _lib_ folder. This is where your main business logic goes
 
 The service processes are in the _srv_ folder. These are small scripts
-to confgure the connections between processes. In a production system
+to configure the connections between processes. In a production system
 you will have many of these and they will change over time.
 
 To demonstrate integration with a number of different Node.js web frameworks,
@@ -48,51 +50,67 @@ respectively named folders.
 
 To test the system, you can run the test app. This app includes all the services into one process for convenience:
 
+```bash
 $ node test-app.js
+```
 
 Or with full logging 
 (see [seneca logging](http://senecajs.org/logging-example.html)):
 
+```bash
 $ node test-app.js --seneca.log.all
+```
 
 Or just action logging:
 
+```bash
 $ node test-app.js --seneca.log=type:act
+```
 
 Once running, you can access the api end points:
 
-http://localhost:3000/api/1.0/live
+(http://localhost:3000/api/1.0/live)
 
 
 # Running the services in development
 
 To run each service separately, use separate terminal windows and run:
 
+```bash
 $ node src/doc-srv.js --seneca.log.all
 $ node src/hist-srv.js --seneca.log.all
 $ node src/real-srv.js --seneca.log.all
+```
 
 The run your framework of choice:
 
 #### express
 
+```bash
 $ cd express
 $ node index.js --seneca.log.all
+```
 
 #### kraken
 
+```bash
 $ cd kraken
 $ node index.js --seneca.log.all
+```
 
 #### express
 
+```bash
 $ cd hapi
 $ node index.js --seneca.log.all
+```
 
 #### express
 
+```bash
 $ cd sails
 $ node index.js --seneca.log.all
+```
 
 And access the main site at:
 
