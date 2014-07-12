@@ -15,6 +15,7 @@ results
 npm-debug.log
 
 node_modules
+node_modules_mac
 *~
 
 data/hist
@@ -26,8 +27,8 @@ contain/real/lib
 contain/real/srv
 contain/hist/lib
 contain/hist/srv
-contain/index/lib
-contain/index/srv
-contain/index/web
+contain/express/lib
+contain/express/srv
+contain/express/express
 
 .build
