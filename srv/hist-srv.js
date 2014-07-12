@@ -14,4 +14,4 @@ require('seneca')()
     host: process.env.REDIS_HOST||'127.0.0.1'
   })
 
-  .listen(9000)
+  .listen(9000,"0.0.0.0")

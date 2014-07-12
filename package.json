@@ -24,7 +24,7 @@
   "dependencies": {
     "connect": "~2.17.3",
     "rolling-stats": "~0.1.0",
-    "seneca": "git://github.com/rjrodger/seneca.git#0.5.17.1",
+    "seneca": "git://github.com/rjrodger/seneca.git#0.5.19rc1",
     "seneca-beanstalk-transport": "^0.1.1",
     "seneca-jsonfile-store": "~0.1.8",
     "seneca-level-store": "~0.1.3",
