@@ -69,7 +69,7 @@ $ node test-app.js --seneca.log=type:act
 
 Once running, you can access the api end points:
 
-(http://localhost:3000/api/1.0/live)
+[http://localhost:3000/api/1.0/live](http://localhost:3000/api/1.0/live)
 
 
 # Running the services in development
@@ -114,7 +114,9 @@ $ node index.js --seneca.log.all
 
 And access the main site at:
 
-http://localhost:3000
+[http://localhost:3000](http://localhost:3000)
+
+
 
 
 
