@@ -29,9 +29,10 @@
 module.exports.routes = {
 
   '/api/1.0/:first/:second?': {
-    controller: 'seneca-api',
+    controller: 'seneca',
     action: 'index'
   },
+
 
   // By default, your root route (aka home page) points to a view
   // located at `views/home/index.ejs`

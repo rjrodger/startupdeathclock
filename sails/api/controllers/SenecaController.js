@@ -1,5 +1,5 @@
 /**
- * Seneca-apiController
+ * SenecaController
  *
  * @module      :: Controller
  * @description	:: A set of functions called `actions`.
@@ -20,14 +20,12 @@ module.exports = {
   
   /**
    * Action blueprints:
-   *    `/seneca-api/index`
-   *    `/seneca-api`
+   *    `/seneca/index`
+   *    `/seneca`
    */
    index: function (req, res) {
-
-     console.log('AAA')
-     //res.send('HW')
-
+    
+     // do nothing - handled by policy
   },
 
 
@@ -35,7 +33,7 @@ module.exports = {
 
   /**
    * Overrides for the settings in `config/controllers.js`
-   * (specific to Seneca-apiController)
+   * (specific to SenecaController)
    */
   _config: {}
 

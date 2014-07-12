@@ -29,7 +29,7 @@ seneca
 
 var seneca_web = seneca.export('web')
 
+
 module.exports = function(req,res,next){
-  console.log('aaa',req.url)
   seneca_web(req,res,next)
 }

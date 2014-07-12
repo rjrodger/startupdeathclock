@@ -1,7 +1,0 @@
-
-module.exports = {
-  index: function(req,res) {
-    console.log('AAA')
-    res.send('HW')
-  }
-};

@@ -36,7 +36,7 @@ module.exports.policies = {
 	}
 	*/
   
-  ,'Seneca-apiController':{
+  ,'SenecaController':{
     '*':'senecaPolicy'
   }
 
