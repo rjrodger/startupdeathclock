@@ -10,6 +10,8 @@
   "license": "MIT",
   "dependencies": {
     "good": "^2.1.2",
-    "hapi": "^6.0.2"
+    "hapi": "^6.0.2",
+    "seneca": "~0.5.19",
+    "seneca-beanstalk-transport": "~0.1.1"
   }
 }
