@@ -98,14 +98,14 @@ $ cd kraken
 $ node index.js --seneca.log.all
 ```
 
-#### express
+#### hapi
 
 ```bash
 $ cd hapi
 $ node index.js --seneca.log.all
 ```
 
-#### express
+#### sails
 
 ```bash
 $ cd sails
