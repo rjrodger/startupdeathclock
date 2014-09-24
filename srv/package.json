@@ -1,0 +1,18 @@
+{
+  "name": "startupdeathclock.services",
+  "version": "0.0.0",
+  "description": "",
+  "main": "doc-srv.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "seneca": "~0.5.19",
+    "seneca-beanstalk-transport": "~0.1.1",
+    "seneca-level-store": "~0.1.3",
+    "seneca-redis-transport": "^0.1.1",
+    "seneca-jsonfile-store": "~0.1.8"
+  }
+}

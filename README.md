@@ -29,6 +29,8 @@ This is a [Node.js](http://nodejs.org) app, using the [Seneca](http://senecajs.o
 You will need to install [Redis](http://redis.io/) (for pub-sub messages) and
 [beanstalk](http://kr.github.io/beanstalkd/) (for queued messages). Just run the basic servers with default configuration.
 
+* See [giant killing with beanstalkd](http://www.sitepoint.com/giant-killing-with-beanstalkd/) for intro to beanstalkd
+
 You will also need [Docker](http://docker.com) to run the full deployment scenario. However you can run without it.
 
 
@@ -54,7 +56,7 @@ To test the system, you can run the test app. This app includes all the services
 $ node test-app.js
 ```
 
-Or with full logging 
+Or with full logging
 (see [seneca logging](http://senecajs.org/logging-example.html)):
 
 ```bash
@@ -77,9 +79,9 @@ Once running, you can access the api end points:
 To run each service separately, use separate terminal windows and run:
 
 ```bash
-$ node src/doc-srv.js --seneca.log.all
-$ node src/hist-srv.js --seneca.log.all
-$ node src/real-srv.js --seneca.log.all
+$ node srv/doc-srv.js --seneca.log.all
+$ node srv/hist-srv.js --seneca.log.all
+$ node srv/real-srv.js --seneca.log.all
 ```
 
 The run your framework of choice:
